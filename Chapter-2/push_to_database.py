@@ -10,7 +10,7 @@ load_dotenv()
 functions = [league_table,top_scorers,detail_top,player_table,all_time_table,all_time_winner_club,top_scorers_seasons,goals_per_season]
 
 
-conn_string = os.getenv('CONN_STRING')
+conn_string = os.getenv('CONN_STRING_PSQL')
 
 db = create_engine(conn_string)
 conn = db.connect() 

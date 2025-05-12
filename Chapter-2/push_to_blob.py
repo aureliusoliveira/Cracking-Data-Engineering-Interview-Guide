@@ -39,7 +39,7 @@ def to_blob(func):
     parquet_buffer = BytesIO()
     pq.write_table(table, parquet_buffer)
 
-    connection_string = os.getenv('CONN_STRING_BLOB')
+    connection_string = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
 
     container_name = "testtech"
