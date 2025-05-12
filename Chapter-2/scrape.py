@@ -9,7 +9,7 @@ def league_table():
     headers = []
     page = requests.get(url)
     soup = BeautifulSoup(page.text,  "html.parser")
-    table= soup.find("table", class_="ssrcss-14j0ip6-Table e3bga5w5")
+    table= soup.find("table", class_="ssrcss-5o3au1-Table e3bga5w2")
 
     for i in table.find_all('th'):
         title = i.text
@@ -28,7 +28,7 @@ def top_scorers():
     headers = []
     page = requests.get(url)
     soup = BeautifulSoup(page.text,  "html.parser")
-    table= soup.find("table", class_="gs-o-table")
+    table= soup.find("table", class_="ssrcss-13lk35i-TableWrapper e1icz102")
 
     for i in table.find_all('th'):
         title = i.text
@@ -190,3 +190,23 @@ def goals_per_season():
     goals_per_season.rename(columns = {'goals':'Goals','Ø goals':'Average Goals'}, inplace = True)
 
     return goals_per_season
+
+
+if __name__ == "__main__":
+    #league_table = league_table()
+    #top_scorers = top_scorers()
+    detail_top = detail_top()
+    player_table = player_table()
+    all_time_table = all_time_table()
+    all_time_winner_club = all_time_winner_club()
+    top_scorers_seasons = top_scorers_seasons()
+    goals_per_season = goals_per_season()
+
+    #print(league_table.head())
+    #print(top_scorers.head())
+    print(detail_top.head())
+    print(player_table.head())
+    print(all_time_table.head())
+    print(all_time_winner_club.head())
+    print(top_scorers_seasons.head())
+    print(goals_per_season.head())  
