@@ -27,4 +27,4 @@ jobs:
         env:
           CONN_STRING: ${{ secrets.CONN_STRING_PSQL }}
           BLOB_CONN_STRING: ${{ secrets.BLOB_CONN_STRING }}
-        run: python Chapter-2\main.py
+        run: python Chapter-2/main.py
