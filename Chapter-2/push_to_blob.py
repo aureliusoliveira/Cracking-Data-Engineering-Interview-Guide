@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-load_dotenv()
 
 functions = [league_table,top_scorers,detail_top,player_table,all_time_table,all_time_winner_club,top_scorers_seasons,goals_per_season]
 
