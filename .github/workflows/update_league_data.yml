@@ -25,7 +25,7 @@ jobs:
 
       - name: Run main script
         env:
-          CONN_STRING: ${{ secrets.CONN_STRING_PSQL }}
+          CONN_STRING_PSQL: ${{ secrets.CONN_STRING_PSQL }}
           BLOB_CONN_STRING: ${{ secrets.BLOB_CONN_STRING }}
         run: |
           cd Chapter-2
